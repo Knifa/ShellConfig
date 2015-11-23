@@ -81,3 +81,10 @@ export EDITOR='vim'
 # Load nvm if it exists.
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+# Load pyenv if it exists.
+export PYENV_ROOT="$HOME/.pyenv"
+if [ -s $PYENV_ROOT/bin/pyenv ] then
+	export PATH="$PYENV_ROOT/bin:$PATH"
+	eval "$(pyenv init -)"
+fi
