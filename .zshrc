@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/knifa/.oh-my-zsh
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -84,7 +84,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # Load pyenv if it exists.
 export PYENV_ROOT="$HOME/.pyenv"
-if [ -s $PYENV_ROOT/bin/pyenv ] then
-	export PATH="$PYENV_ROOT/bin:$PATH"
+[ -s $PYENV_ROOT/bin/pyenv ] && 
+	export PATH="$PYENV_ROOT/bin:$PATH" && 
 	eval "$(pyenv init -)"
-fi
+
