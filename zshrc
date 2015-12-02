@@ -84,7 +84,9 @@ export NVM_DIR="$HOME/.nvm"
 
 # Load pyenv if it exists.
 export PYENV_ROOT="$HOME/.pyenv"
-[ -s $PYENV_ROOT/bin/pyenv ] && 
+[ -s "$PYENV_ROOT/bin/pyenv" ] && 
 	export PATH="$PYENV_ROOT/bin:$PATH" && 
 	eval "$(pyenv init -)"
 
+# Set dircolors if it exists
+[ -r "$HOME/.dircolors" ] && eval `dircolors "$HOME/.dircolors"`
