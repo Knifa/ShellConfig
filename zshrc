@@ -93,8 +93,8 @@ export PYENV_ROOT="$HOME/.pyenv"
 [ -r "$HOME/.dircolors" ] && eval `dircolors "$HOME/.dircolors"`
 
 alias  l='ls --color=always --group-directories-first -hgo --time-style=+"%Y-%m-%d"'
-alias ll='ls --color=always --group-directories-first -hAgo --time-style=+"%Y-%m-%d"'
-alias la='ls --color=always --group-directories-first -hlA --time-style=+"%Y-%m-%d"'
+alias la='ls --color=always --group-directories-first -hAgo --time-style=+"%Y-%m-%d"'
+alias lv='ls --color=always --group-directories-first -hlA --time-style=+"%Y-%m-%d"'
 alias ls='ls --color=auto --group-directories-first -h --time-style=+"%Y-%m-%d"'
 
 if type 'perl' > /dev/null; then
@@ -103,13 +103,13 @@ if type 'perl' > /dev/null; then
                 | perl -ne 's#\s+\d+(?=\s+\d+)(?!\s+\d+-)##; print;'
         }; alias l='_l'
 
-	function _ll {
-        	ll $@ \
-        	| perl -ne 's#\s+\d+(?=\s+\d+)(?!\s+\d+-)##; print;'
-	}; alias ll='_ll'
-
 	function _la {
-	       	la $@ \
-        	| perl -ne 's#\s+\d+(?=\s+\D+)(?=\s+\D+)##; print;'
+        	la $@ \
+        	| perl -ne 's#\s+\d+(?=\s+\d+)(?!\s+\d+-)##; print;'
 	}; alias la='_la'
+
+	function _lv {
+	       	lv $@ \
+        	| perl -ne 's#\s+\d+(?=\s+\D+)(?=\s+\D+)##; print;'
+	}; alias lv='_lv'
 fi
