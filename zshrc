@@ -92,10 +92,11 @@ export PYENV_ROOT="$HOME/.pyenv"
 # Set dircolors if it exists
 [ -r "$HOME/.dircolors" ] && eval `dircolors "$HOME/.dircolors"`
 
-alias  l='ls --color=always --group-directories-first -hgo --time-style=+"%Y-%m-%d"'
+alias l='ls --color=always --group-directories-first -hgo --time-style=+"%Y-%m-%d"'
 alias la='ls --color=always --group-directories-first -hAgo --time-style=+"%Y-%m-%d"'
 alias lv='ls --color=always --group-directories-first -hlA --time-style=+"%Y-%m-%d"'
 alias ls='ls --color=auto --group-directories-first -h --time-style=+"%Y-%m-%d"'
+unalias ll
 
 if type 'perl' > /dev/null; then
 	function _l {
